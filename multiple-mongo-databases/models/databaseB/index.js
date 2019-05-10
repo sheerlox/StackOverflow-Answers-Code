@@ -1,5 +1,6 @@
-const Todo = require('./Todo')
+const mongoose = require('./mongoose')
+const TodoSchema = require('../schemas/Todo')
 
 module.exports = {
-  Todo
+  Todo: mongoose.model('Todo', TodoSchema)
 }

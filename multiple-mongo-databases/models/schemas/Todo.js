@@ -1,4 +1,4 @@
-const mongoose = require('./mongoose')
+const mongoose = require('mongoose')
 
 const TodoSchema = new mongoose.Schema({
   name: String,
@@ -7,4 +7,4 @@ const TodoSchema = new mongoose.Schema({
   updated_at: { type: Date, default: Date.now }
 })
 
-module.exports = mongoose.model('Todo', TodoSchema)
+module.exports = TodoSchema
