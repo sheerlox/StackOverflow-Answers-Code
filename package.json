@@ -1,0 +1,16 @@
+{
+  "name": "stackoverflow-answers-code",
+  "version": "1.0.0",
+  "repository": "git@github.com:SherloxFR/StackOverflow-Answers-Code.git",
+  "author": "Pierre Cavin <tech@sherlox.io>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fs-extra": "^8.0.0",
+    "handlebars": "^4.1.2",
+    "inquirer": "^6.3.1"
+  },
+  "scripts": {
+    "generate": "node ./generate.js"
+  }
+}
