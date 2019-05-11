@@ -1,5 +1,6 @@
 /**
- * generate.js
+ * file:   generate.js
+ * author: Pierre Cavin <tech@sherlox.io>
  *
  * This script generates a new project in the answers folder,
  * using a selected template from the templates folder.
@@ -33,39 +34,39 @@ const inquirer = require('inquirer')
      */
 
     const templates = (await getDirectories(path.join(__dirname, 'templates'))).map(popDirectory)
-    const answers = await inquirer
-      .prompt([
-        {
-          type: 'input',
-          name: 'projectName',
-          message: 'Project name'
-        },
-        {
-          type: 'input',
-          name: 'projectLink',
-          message: 'SO question link',
-          validate: (value) => {
-            var pass = value.match(
-              /https:\/\/stackoverflow.com\/questions\/\d*\/.+/i
-            )
-            if (pass) {
-              return true
-            }
-
-            return 'Please enter a valid SO question link'
+    const answers = await inquirer.prompt([
+      {
+        type: 'input',
+        name: 'projectName',
+        message: 'Project name'
+      },
+      {
+        type: 'input',
+        name: 'projectLink',
+        message: 'SO question link',
+        validate: (value) => {
+          var pass = value.match(
+            /https:\/\/stackoverflow.com\/questions\/\d*\/.+/i
+          )
+          if (pass) {
+            return true
           }
-        },
-        {
-          type: 'list',
-          name: 'templateName',
-          message: 'Template to use',
-          choices: templates
+
+          return 'Please enter a valid SO question link'
         }
-      ])
+      },
+      {
+        type: 'list',
+        name: 'templateName',
+        message: 'Template to use',
+        choices: templates
+      }
+    ])
     const templateName = answers.templateName
     const projectLink = answers.projectLink
 
-    const projectName = answers.projectName.toLowerCase()
+    const projectName = answers.projectName
+      .toLowerCase()
       .split(' ')
       .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
       .join(' ')
@@ -98,7 +99,8 @@ const inquirer = require('inquirer')
     await fs.writeFile(path.join(projectPath, 'package.json'), rendered['package.json'])
     await fs.writeFile(path.join(projectPath, 'README.md'), rendered['README.md'])
     await fs.appendFile(path.join(__dirname, 'README.md'), `\n- [${projectName}](${projectLink})`)
-    console.log('Project created at:', popDirectory(__dirname) + '/answers/' + projectId)
+
+    console.log(`Project "${projectName}" at: ${popDirectory(__dirname) + '/answers/' + projectId}`)
   } catch (err) {
     console.error(err)
   }
