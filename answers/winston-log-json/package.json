@@ -1,7 +1,7 @@
 {
   "name": "winston-log-json",
   "version": "0.0.1",
-  "author": "SherloxFR",
+  "author": "Pierre Cavin <tech@sherlox.io>",
   "license": "MIT",
   "private": true,
   "scripts": {
