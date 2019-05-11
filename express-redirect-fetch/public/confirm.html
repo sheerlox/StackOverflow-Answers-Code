@@ -1,0 +1,7 @@
+confirm email <span id='email'></span>
+<script>
+  const email = localStorage.getItem('email')
+  if (!email) window.location = '/signup'
+
+  document.getElementById('email').innerHTML = email
+</script>
