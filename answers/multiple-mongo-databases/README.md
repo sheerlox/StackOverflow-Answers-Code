@@ -1,6 +1,10 @@
 [<img align="right" src="https://cdn.rawgit.com/standard/standard/master/badge.svg">](https://standardjs.com/)
 # Multiple Mongo Databases
 
+[StackOverflow Question](https://stackoverflow.com/questions/56084264/how-would-i-change-mongodb-active-database-based-on-a-req-param)
+
+## Installing and running
+
 To run the project:
 ```bash
 git clone https://github.com/SherloxFR/StackOverflow-Answers-Code.git
@@ -13,12 +17,7 @@ Then send requests to http://localhost:3000/api/todos (no frontend, API only).
 
 You can find the endpoint specs in `routes/todos.js`
 
-
 -------------------------
-
-[StackOverflow Question](https://stackoverflow.com/questions/56084264/how-would-i-change-mongodb-active-database-based-on-a-req-param)
-
-[StackOverflow Solution](https://stackoverflow.com/questions/56084264/how-would-i-change-mongodb-active-database-based-on-a-req-param/56084742#56084742)
 
 ### Question Recap:
 - [x] Manage multiple MongoDB databases through Mongoose
