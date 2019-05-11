@@ -26,7 +26,7 @@ app.use(function (req, res, next) {
   next()
 })
 
-app.use('/todos', todos)
+app.use('/api/todos', todos)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

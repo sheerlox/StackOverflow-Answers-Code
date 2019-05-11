@@ -8,7 +8,10 @@ npm install
 npm start
 ```
 
-Then go to http://localhost:3000
+Then send requests to http://localhost:3000/api/todos (no frontend, API only).
+
+You can find the endpoint specs in `routes/todos.js`
+
 
 -------------------------
 
