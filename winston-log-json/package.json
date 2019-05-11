@@ -1,0 +1,14 @@
+{
+  "name": "winston-log-json",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "SherloxFR",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "winston": "3.2.1"
+  }
+}
