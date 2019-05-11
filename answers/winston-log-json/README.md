@@ -1,3 +1,4 @@
+[<img align="right" src="https://cdn.rawgit.com/standard/standard/master/badge.svg">](https://standardjs.com/)
 # Winston Log JSON
 
 To run the project:

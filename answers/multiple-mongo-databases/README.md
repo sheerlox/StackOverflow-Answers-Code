@@ -1,3 +1,4 @@
+[<img align="right" src="https://cdn.rawgit.com/standard/standard/master/badge.svg">](https://standardjs.com/)
 # Multiple Mongo Databases
 
 To run the project:
