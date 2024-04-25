@@ -45,14 +45,14 @@ const inquirer = require('inquirer')
         name: 'projectLink',
         message: 'SO question link',
         validate: (value) => {
-          var pass = value.match(
+          const pass = value.match(
             /https:\/\/stackoverflow.com\/questions\/\d*\/.+/i
           )
           if (pass) {
             return true
           }
 
-          return 'Please enter a valid SO question link'
+          return false
         }
       },
       {
